@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrea Pardo Gispert | Portafolio Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+            color: #333;
+        }
+        .text-shadow-hero {
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+        }
+        .color-primary { background-color: #005F73; }
+        .color-secondary { background-color: #0A9396; }
+        .color-accent { background-color: #94D2BD; }
+        .color-highlight { background-color: #EE9B00; }
+        .text-primary { color: #005F73; }
+        .text-secondary { color: #0A9396; }
+        .text-accent { color: #94D2BD; }
+        .text-highlight { color: #EE9B00; }
+
+        .btn-main {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            background-color: #EE9B00;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-main:hover {
+            background-color: #CA6702;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            background-color: transparent;
+            color: #94D2BD;
+            border: 2px solid #94D2BD;
+        }
+        .btn-secondary:hover {
+            background-color: #005F73;
+            color: white;
+            transform: translateY(-2px);
+        }
+        .btn-gemini {
+            cursor: pointer;
+            color: #0A9396;
+            font-weight: 600;
+            transition: color 0.2s ease;
+            display: block;
+            width: fit-content;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #0A9396;
+            background-color: rgba(148, 210, 189, 0.2);
+        }
+        .btn-gemini:hover {
+            color: #005F73;
+            border-color: #005F73;
+            background-color: rgba(0, 95, 115, 0.1);
+        }
+        .loading-spinner {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 0.5rem;
+        }
+        .profile-image {
+            filter: grayscale(100%); /* Applied grayscale filter */
+        }
+    </style>
+</head>
+<body class="leading-relaxed">
+
+    <nav class="fixed w-full bg-white bg-opacity-95 shadow-lg z-50 py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="#" class="text-2xl font-bold text-primary">Andrea Pardo</a>
+            <div class="space-x-6 hidden md:block">
+                <a href="#about" class="text-gray-700 hover:text-primary font-medium">Sobre Mí</a>
+                <a href="#expertise" class="text-gray-700 hover:text-primary font-medium">Expertise</a>
+                <a href="#projects" class="text-gray-700 hover:text-primary font-medium">Proyectos</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary font-medium">Contacto</a>
+            </div>
+            <button class="md:hidden text-primary text-2xl">☰</button>
+        </div>
+    </nav>
+
+    <header class="color-primary text-white py-32 md:py-48 text-center shadow-xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-transparent to-black opacity-10 z-0"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <img src="uploaded:avatar.jpg-bb825e18-7d35-4aca-9579-3bf565a4b2ff" alt="Andrea Pardo Gispert" class="profile-image rounded-full w-36 h-36 mx-auto mb-8 border-4 border-white shadow-lg">
+            <h1 class="text-4xl md:text-6xl font-black mb-4 text-shadow-hero tracking-wide">Andrea Pardo Gispert</h1>
+            <p class="text-xl md:text-3xl font-light mb-8 text-accent text-shadow-hero">
+                Especialista en Análisis de Datos, IA y Optimización de Procesos
+            </p>
+            <p class="max-w-4xl mx-auto text-lg md:text-xl mb-10 opacity-90">
+                Transformo datos complejos en decisiones estratégicas y eficiencia operativa.
+                Mi enfoque es construir soluciones innovadoras que generen un impacto real y medible en tu negocio.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#projects" class="btn-main">Ver Proyectos</a>
+                <a href="#contact" class="btn-secondary">Contactar</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">Sobre Mí</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="text-lg leading-relaxed text-gray-700">
+                    <p class="mb-4">
+                        Soy Andrea Pardo Gispert, una profesional con una visión única que fusiona la <strong>ingeniería en organización industrial</strong> con la <strong>ciencia de datos e inteligencia artificial</strong>. Mi trayectoria me ha permitido desarrollar una sólida experiencia en la <strong>gestión y optimización de proyectos industriales</strong>, aplicando metodologías ágiles como Scrum, Lean y Kanban para maximizar la eficiencia operativa.
+                    </p>
+                    <p class="mb-4">
+                        Mi pasión reside en <strong>transformar datos complejos en insights accionables</strong> y en la creación de <strong>soluciones de IA/ML</strong> que resuelvan problemas de negocio reales. Estoy comprometida con la <strong>automatización inteligente</strong> y el desarrollo de proyectos innovadores que impulsen la eficiencia y el valor en el ámbito de la Industria 4.0 y la robótica.
+                    </p>
+                    <p>
+                        Busco oportunidades donde mi habilidad para <strong>analizar, predecir y optimizar</strong> pueda generar un impacto tangible y contribuir al crecimiento y la innovación.
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-inner text-center">
+                    <h3 class="text-xl font-bold mb-4 text-primary">Mi Enfoque</h3>
+                    <ul class="list-disc list-inside text-left text-gray-700 space-y-2 mx-auto max-w-sm">
+                        <li><strong>Orientación a Resultados:</strong> Soluciones que generen valor real.</li>
+                        <li><strong>Metodologías Ágiles:</strong> Eficiencia y flexibilidad en cada proyecto.</li>
+                        <li><strong>Innovación con Datos:</strong> Aplicación de IA para la automatización inteligente.</li>
+                        <li><strong>Colaboración:</strong> Trabajo efectivo en equipos multidisciplinares.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="py-16 md:py-24 color-accent text-primary">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Mi Expertise</h2>
+            <p class="text-center max-w-3xl mx-auto text-lg mb-10 text-gray-700">
+                Mi conjunto de habilidades combina una base sólida en la gestión de proyectos y la optimización de procesos con un dominio creciente en el análisis de datos y la inteligencia artificial.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-secondary text-4xl mb-3">⚙️</div>
+                    <h3 class="text-xl font-bold mb-2 text-primary">Gestión y Optimización de Procesos</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Aplicación de metodologías ágiles y de mejora continua para la eficiencia operativa.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>Scrum, Lean, Kanban</li>
+                        <li>5S, Kaizen</li>
+                        <li>Identificación de Cuellos de Botella</li>
+                    </ul>
+                    <div class="skill-relevance-desc hidden text-gray-600 mt-4 text-sm text-left w-full"></div>
+                    <button class="toggle-skill-relevance-btn btn-gemini mt-4">✨ Explora la Relevancia</button>
+                    <span class="loading-spinner hidden ml-2 text-sm text-gray-500">Cargando...</span>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-secondary text-4xl mb-3">📊</div>
+                    <h3 class="text-xl font-bold mb-2 text-primary">Análisis y Visualización de Datos</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Transformación de datos en insights accionables y reportes claros.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>Pandas, NumPy, Matplotlib</li>
+                        <li>SQL, Power BI (básico)</li>
+                        <li>Análisis Exploratorio de Datos (EDA)</li>
+                    </ul>
+                    <div class="skill-relevance-desc hidden text-gray-600 mt-4 text-sm text-left w-full"></div>
+                    <button class="toggle-skill-relevance-btn btn-gemini mt-4">✨ Explora la Relevancia</button>
+                    <span class="loading-spinner hidden ml-2 text-sm text-gray-500">Cargando...</span>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-secondary text-4xl mb-3">🧠</div>
+                    <h3 class="text-xl font-bold mb-2 text-primary">Inteligencia Artificial y Machine Learning</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Desarrollo e implementación de modelos predictivos y soluciones inteligentes.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>Machine Learning, Deep Learning</li>
+                        <li>Scikit-learn</li>
+                        <li>Modelos Predictivos</li>
+                    </ul>
+                    <div class="skill-relevance-desc hidden text-gray-600 mt-4 text-sm text-left w-full"></div>
+                    <button class="toggle-skill-relevance-btn btn-gemini mt-4">✨ Explora la Relevancia</button>
+                    <span class="loading-spinner hidden ml-2 text-sm text-gray-500">Cargando...</span>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-secondary text-4xl mb-3">💻</div>
+                    <h3 class="text-xl font-bold mb-2 text-primary">Lenguajes y Herramientas</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Dominio de herramientas esenciales para el desarrollo y control de proyectos.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>Python, SQL</li>
+                        <li>Git, GitHub</li>
+                        <li>HTML, CSS, Flask (básico)</li>
+                    </ul>
+                    <div class="skill-relevance-desc hidden text-gray-600 mt-4 text-sm text-left w-full"></div>
+                    <button class="toggle-skill-relevance-btn btn-gemini mt-4">✨ Explora la Relevancia</button>
+                    <span class="loading-spinner hidden ml-2 text-sm text-gray-500">Cargando...</span>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-secondary text-4xl mb-3">🤝</div>
+                    <h3 class="text-xl font-bold mb-2 text-primary">Comunicación y Colaboración</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Habilidades interpersonales clave para el éxito en equipos multidisciplinares.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>Trabajo Colaborativo</li>
+                        <li>Seguimiento de KPIs</li>
+                        <li>Visión de Negocio</li>
+                    </ul>
+                    <div class="skill-relevance-desc hidden text-gray-600 mt-4 text-sm text-left w-full"></div>
+                    <button class="toggle-skill-relevance-btn btn-gemini mt-4">✨ Explora la Relevancia</button>
+                    <span class="loading-spinner hidden ml-2 text-sm text-gray-500">Cargando...</span>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-secondary text-4xl mb-3">📚</div>
+                    <h3 class="text-xl font-bold mb-2 text-primary">Formación Académica</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Base educativa sólida que complementa la experiencia práctica.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>Ingeniería Organización Industrial</li>
+                        <li>Especializaciones IA/ML/DL</li>
+                        <li>Programador Python</li>
+                    </ul>
+                    <div class="skill-relevance-desc hidden text-gray-600 mt-4 text-sm text-left w-full"></div>
+                    <button class="toggle-skill-relevance-btn btn-gemini mt-4">✨ Explora la Relevancia</button>
+                    <span class="loading-spinner hidden ml-2 text-sm text-gray-500">Cargando...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">Mis Proyectos Destacados</h2>
+            <p class="text-center max-w-3xl mx-auto text-lg mb-10 text-gray-700">
+                Aquí puedes explorar cómo he aplicado mis habilidades para resolver problemas reales, desde el desarrollo de aplicaciones hasta la implementación de modelos predictivos avanzados.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-bold mb-2 text-primary">Plataforma Web Full Stack (Flask + SQLite)</h3>
+                    <p class="original-desc text-gray-700 mb-4 text-sm">
+                        Desarrollo de una aplicación web de gestión de tareas como proyecto final del curso de Python (400h). Demuestra mi capacidad para construir soluciones <strong>end-to-end</strong> y mi dominio en Flask, HTML, CSS y SQLite.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full color-accent text-primary">Flask</span>
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full color-accent text-primary">SQLite</span>
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full color-accent text-primary">HTML/CSS</span>
+                    </div>
+                    <a href="https://github.com/AndreaPardoGis/nombre-del-repo-plataforma-web" target="_blank" class="text-highlight font-semibold hover:underline">Ver Código en GitHub</a>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-bold mb-2 text-primary">Predicción de Suicidio IA Aplicada a Salud Mental</h3>
+                    <p class="original-desc text-gray-700 mb-4 text-sm">
+                        Creación de un <strong>modelo de clasificación predictivo</strong> en Jupyter Notebook usando scikit-learn. Incluye <strong>análisis exploratorio</strong> con pandas y <strong>visualización de datos</strong> con matplotlib, enfocado en <strong>generar valor</strong> en el ámbito de la salud mental. (Curso de IA - 200h).
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full color-accent text-primary">Scikit-learn</span>
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full color-accent text-primary">Pandas</span>
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full color-accent text-primary">Matplotlib</span>
+                    </div>
+                    <a href="https://github.com/AndreaPardoGis/nombre-del-repo-prediccion-ia" target="_blank" class="text-highlight font-semibold hover:underline">Ver Código en GitHub</a>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-bold mb-2 text-primary">Proyectos de Ciencia de Datos y ML (2025)</h3>
+                    <p class="original-desc text-gray-700 mb-4 text-sm">
+                        Participación en múltiples ejercicios prácticos de IA, ML y Deep Learning, abarcando <strong>limpieza de datos, análisis exploratorio, entrenamiento y evaluación de modelos</strong>, con énfasis en <strong>segmentación, predicción y optimización</strong>.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full color-accent text-primary">ML/DL</span>
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full color-accent text-primary">EDA</span>
+                        <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full color-accent text-primary">Optimización</span>
+                    </div>
+                    <a href="https://github.com/AndreaPardoGis/nombre-del-repo-proyectos-ml" target="_blank" class="text-highlight font-semibold hover:underline">Ver Código en GitHub</a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="https://github.com/AndreaPardoGis" target="_blank" class="btn-main">Ver Todos los Proyectos en GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 color-primary text-white">
+        <div class="container mx-auto px-4 text-center max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-accent text-shadow-hero">¡Hablemos de tu próximo proyecto!</h2>
+            <p class="max-w-3xl mx-auto text-lg md:text-xl mb-10 opacity-90">
+                Estoy disponible para nuevas colaboraciones y oportunidades.
+                No dudes en contactarme para discutir cómo puedo ayudarte a transformar tus datos en valor y optimizar tus operaciones.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                <a href="mailto:andreapardogis@gmail.com" class="btn-main">
+                    📧 Enviar un Email
+                </a>
+                <a href="https://www.linkedin.com/in/andreapardogis" target="_blank" class="btn-secondary">
+                    🔗 Conectar en LinkedIn
+                </a>
+            </div>
+            <p class="mt-8 text-sm text-gray-300">
+                También puedes explorar mi código en <a href="https://github.com/AndreaPardoGis" target="_blank" class="underline hover:no-underline">GitHub</a>.
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-400 py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Andrea Pardo Gispert. Todos los derechos reservados.</p>
+            <p class="mt-2 text-sm">Diseñado y desarrollado con pasión por los datos.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Feature: Explore Skill Relevance
+            const skillToggleButtons = document.querySelectorAll('.toggle-skill-relevance-btn');
+
+            skillToggleButtons.forEach(button => {
+                button.addEventListener('click', async () => {
+                    const skillCard = button.closest('.skill-card');
+                    const skillTitle = skillCard.querySelector('h3').textContent;
+                    const skillRelevanceDesc = skillCard.querySelector('.skill-relevance-desc');
+                    const loadingSpinner = skillCard.querySelector('.loading-spinner');
+                    const originalSkillDesc = skillCard.querySelector('p').textContent;
+
+                    if (skillRelevanceDesc.classList.contains('hidden')) {
+                        if (skillRelevanceDesc.innerHTML === '') {
+                            loadingSpinner.classList.remove('hidden');
+                            button.disabled = true;
+
+                            try {
+                                const prompt = `Explica la relevancia de la habilidad "${skillTitle}" para un perfil profesional que combina ingeniería industrial y ciencia de datos. Enfócate en cómo esta habilidad contribuye a la optimización, análisis y generación de valor en un contexto de Industria 4.0. Sé conciso, de 2-4 frases. Habilidad: "${skillTitle}". Descripción actual: "${originalSkillDesc}"`;
+                                let chatHistory = [];
+                                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                                const payload = { contents: chatHistory };
+                                const apiKey = "";
+                                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                                const response = await fetch(apiUrl, {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify(payload)
+                                });
+
+                                const result = await response.json();
+                                if (result.candidates && result.candidates.length > 0 &&
+                                    result.candidates[0].content && result.candidates[0].content.parts &&
+                                    result.candidates[0].content.parts.length > 0) {
+                                    const text = result.candidates[0].content.parts[0].text;
+                                    skillRelevanceDesc.innerHTML = text;
+                                } else {
+                                    skillRelevanceDesc.innerHTML = 'No se pudo generar una explicación de relevancia en este momento. Inténtalo de nuevo.';
+                                }
+                            } catch (error) {
+                                console.error('Error al llamar a la API de Gemini:', error);
+                                skillRelevanceDesc.innerHTML = 'Error al cargar la relevancia. Por favor, inténtalo de nuevo.';
+                            } finally {
+                                loadingSpinner.classList.add('hidden');
+                                button.disabled = false;
+                            }
+                        }
+                        skillCard.querySelector('ul').classList.add('hidden');
+                        skillCard.querySelector('p:not(.skill-relevance-desc)').classList.add('hidden');
+                        skillRelevanceDesc.classList.remove('hidden');
+                        button.textContent = 'Revertir';
+                    } else {
+                        skillCard.querySelector('ul').classList.remove('hidden');
+                        skillCard.querySelector('p:not(.skill-relevance-desc)').classList.remove('hidden');
+                        skillRelevanceDesc.classList.add('hidden');
+                        button.textContent = '✨ Explora la Relevancia';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
